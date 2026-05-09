@@ -1,7 +1,17 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
+
+const backgroundColor = "hsl(70, 50%, 50%)";
+const foregroundColor = "hsl(20, 50%, 100%)";
 ---
 
 <MainLayout title="About" description="This is the about page">
-    <h1>About Page</h1>
+  <h1>About Page</h1>
 </MainLayout>
+
+<style define:vars={{ backgroundColor, foregroundColor }}>
+  h1 {
+    background-color: var(--backgroundColor);
+    color: var(--foregroundColor);
+  }
+</style>
