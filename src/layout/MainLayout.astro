@@ -1,25 +1,26 @@
 ---
-import  MainHead from "./MainHead.astro";
+import MainHead from "./MainHead.astro";
 
 // style
-import "../styles/global.css"
+import "../styles/global.css";
 
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 
 interface Props {
-    title?: string;
-    description?: string;
+  title?: string;
+  description?: string;
 }
-const {title = "Default Title", description = "Default Description"} = Astro.props as Props;
-
+const { title = "Default Title", description = "Default Description" } =
+  Astro.props as Props;
 ---
 
 <html lang="en">
-	<MainHead {title} {description}/>
-	<body>
-        <Nav/>
-        <slot>Default Slot</slot>
-        <Footer/>
-	</body>
+  <MainHead {title} {description} />
+  <body>
+    <Nav />
+    <main><slot>Default Slot</slot></main>
+
+    <Footer />
+  </body>
 </html>
