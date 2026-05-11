@@ -10,6 +10,10 @@ const navData = [
     {
         name: "Blog",
         link: "/blog"
+    },
+    {
+        name: "Content",
+        link: "/content"
     }
 ]
 

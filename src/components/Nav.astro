@@ -1,5 +1,7 @@
 ---
 import navData from "../data/navData.js";
+import Link from "./Link.astro";
+import Icon from "astro-icon"
 ---
 
 <nav>
@@ -7,9 +9,12 @@ import navData from "../data/navData.js";
     {
       navData.map((item) => (
         <li>
-          <a href={item.link} aria-label={`Go to ${item.name}`}>
+          {/* <a href={item.link} aria-label={`Go to ${item.name}`}>
             {item.name}
-          </a>
+          </a> */}
+          <Link href={item.link} text={item.name} style = "primary" data-navlink 
+          
+          />
         </li>
       ))
     }
