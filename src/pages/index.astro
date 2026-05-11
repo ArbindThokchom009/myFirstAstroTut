@@ -28,16 +28,8 @@ const data = await res.json();
 ---
 
 <MainLayout title={title} description={description}>
-	<nav>
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/blog">Blog</a></li>
-			</ul>
-		</nav>
-		<br>
 		<h1>First Astro site :)</h1>
-		{isVisible && <p style="text-transform: uppercase;">This is visible</p>}
+		<!-- {isVisible && <p style="text-transform: uppercase;">This is visible</p>} -->
 		{isVisible ? <p style="text-transform: uppercase;">This is visible</p> : <p>This is not visible</p>}
 		<div>
 			<h2>{ojb.name}</h2>
